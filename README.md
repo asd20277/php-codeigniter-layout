@@ -37,25 +37,17 @@ php-codeigniter-layout
 
 <ul>
     <li>
-        進入 setting() 設定 $this->copymap[] <br>
-        選用添加要匯出的額外檔案路徑，例如你的圖片檔、js檔。<br>
-        當你執行產出時，這將會複製一份到產出的模板路徑。<br>
+        進入 setting() 設定 $this->copymap[]選用添加要匯出的額外檔案路徑，例如你的圖片檔、js檔。當你執行產出時，這將會複製一份到產出的模板路徑。
     </li>  
 
     <li>
-        我們依照 Codeigniter 編撰 view 的習慣來製作版面。<br>
-        預設在瀏覽的時候，並不會自動生成 html，除非改變URL參數。<br>
-        這樣不會生成一份 html： http://localhost/CI/layout/index <br>
-        這樣會生成一份 html：http://localhost/CI/layout/index/1<br>
-        可參考 layout.php 中的註解：[快速模板]
+        我們依照 Codeigniter 編撰 view 的習慣來製作版面。預設在瀏覽的時候，並不會自動生成 html，除非改變URL參數。這樣不會生成一份 html： 『http://localhost/CI/layout/index』；但 
+        這樣會生成一份 html：『http://localhost/CI/layout/index/1』。 可參考 layout.php 中的註解：[快速模板]
     </li>
 
     <li>
-        最後，我們想要產出所有編輯好的文件，也就是 application/views/layout/* <br>
-        只要在網址打上 http://localhost/CI/layout/project/save 就可以下載zip的封裝。<br>
-        若只想匯出而不下載zip，<br>
-        可在網址打上 http://localhost/CI/layout/project/display <br>
-        就會在 views/build_projecsts_html 產出所有 html。
+        最後，我們想要產出所有編輯好的文件，也就是 『application/views/layout/*』 只要在網址打上 『http://localhost/CI/layout/project/save 』就可以下載zip的封裝；若只想匯出而不下載zip，
+        可在網址打上 『http://localhost/CI/layout/project/display』 就會在 views/build_projecsts_html 產出所有 html。
     </li>
 
 </ul>
