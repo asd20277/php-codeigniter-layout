@@ -7,9 +7,15 @@ php-codeigniter-layout
 
 <h2>特色</h2>
 <ul>
-	<li>用 php 的邏輯來寫你的 html </li>
-	<li>支援繁體中文的假文字串，讓你規劃版面更真實</li>
-	<li>可產出純 html 檔給不懂 php 的夥伴</li>
+    <li>用 php 的邏輯來寫你的 html </li>
+    <li>支援繁體中文的假文字串，讓你規劃版面更真實</li>
+    <li>可產出純 html 檔給不懂 php 的夥伴</li>
+</ul>
+
+
+<h2>維護後要做的事情...</h2>
+<ul>
+    <li>錄影來教學</li>
 </ul>
 
 <h2>安裝方式</h2>
