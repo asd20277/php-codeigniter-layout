@@ -2,7 +2,7 @@ php-codeigniter-layout
 ======================
 
 使用 php 語言來建立你的 html 版面
-<h1>請先閱讀</h1>
+<h2>請先閱讀</h2>
 <p>
     &emsp;&emsp;這是基於 Codeigniter Framework 的一隻程式碼，可以利用我們習慣編輯view的方式來設計模板。在PHP上面先做測試與開發，或是用php語言判別顯示的html，等到最後完成開發了，再生成html非動態語言。範例中不使用Codeigniter的模板語言，強烈推薦使用php原生語言來做 if else 判斷，或是任何的迴圈設計。這方便所有的php程式設計師維護。<br>
 </p>
