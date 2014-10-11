@@ -26,17 +26,17 @@
 
 	<ul>
 		<li><a href="<?=hlink()?>">首頁</a></li>
-		<li><a href="<?=hlink("layout/contact")?>">連結首頁</a></li>
 		<li><a href="<?=hlink("layout/news")?>">最新消息</a></li>
+		<li><a href="<?=hlink("layout/contact")?>">聯絡我們</a></li>
 	</ul>
 	
 
 	<section>
-
+		<? $Jsnfakestr = new Jsnfakestr; ?>
 		<? $a=0; while($a++<5) { ?>
 			<article>
-				<h2><?=fake(10, 22)?></h2>
-				<p><?=fake(400, 800)?></p>
+				<h2><?=$Jsnfakestr->create(10, 20)?></h2>
+				<p><?=$Jsnfakestr->create(400, 800)?></p>
 			</article>
 		<? } ?>
 
