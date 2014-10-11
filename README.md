@@ -1,7 +1,7 @@
 php-codeigniter-layout
 ======================
 
-<!DOCTYPE html>
+
 <html>
 <head>
 </head>
