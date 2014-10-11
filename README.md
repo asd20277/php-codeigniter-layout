@@ -32,7 +32,6 @@ php-codeigniter-layout
 <li>再把擴充程式庫『application/libraries/jsnclass/jsnfakestr』複製到你的 Codeigniter 對應路徑底下。</li>
 <li>若你的 Codeigniter 沒有在 .htaccess 添加去除 index.php 網址字串的設計，那麼就直接在網址打入『http://localhost/CI/index.php/layout』來查看範例。</li>
 <li>
-<pre>&nbsp;</pre>
 </li>
 </ul>
 <h2>開發方法</h2>
