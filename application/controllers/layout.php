@@ -146,6 +146,8 @@ class Layout extends CI_Controller {
 		$this->load->helper('string');
 		$this->load->helper('file');
 		$this->load->library('zip');
+
+		//引入假文系統
 		include_once(APPPATH . "libraries/jsnclass/jsnfakestr/jsnfakestr.php");
 
 		//報錯
