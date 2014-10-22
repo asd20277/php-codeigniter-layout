@@ -32,14 +32,12 @@
 	
 
 	<section>
-		<? $Jsnfakestr = new Jsnfakestr; ?>
 		<? $a=0; while($a++<5) { ?>
 			<article>
-				<h2><?=$Jsnfakestr->create(10, 20)?></h2>
-				<p><?=$Jsnfakestr->create(400, 800)?></p>
+			<h2><?=Jsnfakestr::lang("en")->create(10, 20)?></h2>
+				<p><?=Jsnfakestr::lang("ch")->create(400, 800)?></p>
 			</article>
 		<? } ?>
-
 	</section>
 </body>
 </html>
