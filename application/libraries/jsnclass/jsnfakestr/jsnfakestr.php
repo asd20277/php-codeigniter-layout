@@ -4,10 +4,15 @@
  */
 class Jsnfakestr
 {
-	//假文存放
-	public $data;
 
-	
+    // 紀錄當前使用的語言如 ch
+    public static $language;
+
+	// 假文存放陣列
+    // array("語言名稱" => array("中文", "文字"));
+    // 如 array("ch" => array());
+	public static $data;
+
 
 	/**
 	 * 擷取字串
@@ -20,7 +25,7 @@ class Jsnfakestr
 	public function word_limit ($String , $Num = 100 , $OverString = "...", $HTML_LIMIT = true , $Code = "UTF-8") 
 	{
 		if (is_string($HTML_LIMIT)) {
-			$String = str_replace(array("  ","&nbsp;","\t","\r"),array(" ",""),strip_tags($String,$HTML_LIMIT)) ;
+    		$String = str_replace(array("  ","&nbsp;","\t","\r"),array(" ",""),strip_tags($String,$HTML_LIMIT)) ;
 		} else if ($HTML_LIMIT == false) {
 			//不動
 		} else if ($HTML_LIMIT == true) {
@@ -92,76 +97,118 @@ class Jsnfakestr
 	 * 
 	 * @param  $array 若指定假文陣列，將使用使用者自訂。預設使用內置假文
 	 */
-	public function set_data($array = NULL)
+	public static function set_data($language = NULL, $array = NULL)
 	{
-		if (is_array($array)) 
-		{
-			$this->data = $array;
-			return $this;
-		}
+        $data['ch'] = array
+        (
+            "我要給阿Ｑ做正傳，",
+            "已經不止一兩年了。",
+            "但一面要做，",
+            "一面又往回想，",
+            "這足見我不是一個「立言」的人，",
+            "因為從來不朽之筆，",
+            "須傳不朽之人，",
+            "於是人以文傳－－",
+            "文以人傳——究竟誰靠誰傳，",
+            "漸漸的不甚瞭然起來，",
+            "而終於歸接到傳阿Ｑ，",
+            "彷彿思想裡有鬼似的。",
+            "然而要做這一篇速朽的文章，",
+            "才下筆，",
+            "便感到萬分的困難了。",
+            "第一是文章的名目。",
+            "孔子曰，",
+            "「名不正則言不順」。",
+            "這原是應該極註意的。",
+            "傳的名目很繁多：",
+            "列傳，",
+            "自傳，",
+            "內傳，",
+            "外傳，",
+            "別傳，",
+            "家傳，",
+            "小傳……",
+            "而可惜都不合。",
+            "阿Ｑ並沒有抗辯他確鑿姓趙，",
+            "只用手摸著左頰，",
+            "和地保退出去了；",
+            "外面又被地保訓斥了一番，",
+            "謝了地保二百文酒錢。",
+            "知道的人都說阿Ｑ太荒唐，",
+            "自己去招打；",
+            "他大約未必姓趙，",
+            "即使真姓趙，",
+            "有趙太爺在這裡，",
+            "也不該如此胡說的。",
+            "此後便再沒有人提起他的氏族來，",
+            "以我終於不知道阿Ｑ究竟什麼姓。",
+            "我又不知道阿Ｑ的名字是怎麼寫的。",
+            "他活著的時候，",
+            "人都叫他阿Ｑｕｅｉ，",
+            "死了以後，",
+            "便沒有一個人再叫阿Ｑｕｅｉ了，",
+            "那裡還會有「著之竹帛」的事。",
+            "若論「著之竹帛」，",
+            "這篇文章要算第一次，",
+            "所以先遇著了這第一個難關。",
+            "我曾仔細想：",
+            "阿Ｑｕｅｉ，",
+            "阿桂還是阿貴呢？",
+            "倘使他號月亭，",
+            "或者在八月間做過生日，",
+            "那一定是阿桂了；",
+        );
 
-		$this->data = array
-    	(
-    		"我要給阿Ｑ做正傳，",
-    		"已經不止一兩年了。",
-    		"但一面要做，",
-    		"一面又往回想，",
-    		"這足見我不是一個「立言」的人，",
-    		"因為從來不朽之筆，",
-    		"須傳不朽之人，",
-    		"於是人以文傳－－",
-    		"文以人傳——究竟誰靠誰傳，",
-    		"漸漸的不甚瞭然起來，",
-    		"而終於歸接到傳阿Ｑ，",
-    		"彷彿思想裡有鬼似的。",
-    		"然而要做這一篇速朽的文章，",
-    		"才下筆，",
-    		"便感到萬分的困難了。",
-    		"第一是文章的名目。",
-    		"孔子曰，",
-    		"「名不正則言不順」。",
-    		"這原是應該極註意的。",
-    		"傳的名目很繁多：",
-    		"列傳，",
-    		"自傳，",
-    		"內傳，",
-    		"外傳，",
-    		"別傳，",
-    		"家傳，",
-    		"小傳……",
-    		"而可惜都不合。",
-    		"阿Ｑ並沒有抗辯他確鑿姓趙，",
-    		"只用手摸著左頰，",
-    		"和地保退出去了；",
-    		"外面又被地保訓斥了一番，",
-    		"謝了地保二百文酒錢。",
-    		"知道的人都說阿Ｑ太荒唐，",
-    		"自己去招打；",
-    		"他大約未必姓趙，",
-    		"即使真姓趙，",
-    		"有趙太爺在這裡，",
-    		"也不該如此胡說的。",
-    		"此後便再沒有人提起他的氏族來，",
-    		"以我終於不知道阿Ｑ究竟什麼姓。",
-    		"我又不知道阿Ｑ的名字是怎麼寫的。",
-    		"他活著的時候，",
-    		"人都叫他阿Ｑｕｅｉ，",
-    		"死了以後，",
-    		"便沒有一個人再叫阿Ｑｕｅｉ了，",
-    		"那裡還會有「著之竹帛」的事。",
-    		"若論「著之竹帛」，",
-    		"這篇文章要算第一次，",
-    		"所以先遇著了這第一個難關。",
-    		"我曾仔細想：",
-    		"阿Ｑｕｅｉ，",
-    		"阿桂還是阿貴呢？",
-    		"倘使他號月亭，",
-    		"或者在八月間做過生日，",
-    		"那一定是阿桂了；",
-    	);
+    
+        $data['en'] = array
+        (
+            "In November, ", 
+            "1805, Prince Vasili had to go on a tour of inspection in four different provinces. ", 
+            "He had arranged this for himself so as to visit his neglected estates at the same time and pick up his son Anatole where his regiment was stationed,",
+            "and take him to visit Prince Nicholas Bolkonski in order to arrange a match for him with the daughter of that rich old man.", 
+            "But before leaving home and undertaking these new affairs, ", 
+            "Prince Vasili had to settle matters with Pierre, who, it is true, ",
+            "had latterly spent whole days at home, ",
+            "that is, in Prince Vasili's house where he was staying, ",
+            "and had been absurd, excited, and foolish in Helene's presence (as a lover should be), ",
+            "but had not yet proposed to her. ",
+            "This is all very fine, but things must be settled, ",
+            "said Prince Vasili to himself, with a sorrowful sigh, one morning, ",
+            "feeling that Pierre who was under such obligations to him ('But never mind that') was not behaving very well in this matter. ",
+            "'Youth, frivolity... well, God be with him, '",
+            "thought he, relishing his own goodness of heart,",
+        );
+        
+        if ($language == "en" or $language == "ch") 
+        {
+            $ary = $data[$language];
+        }
+        else
+        {
+            $ary = array();
+            
+            // 把第二層陣列全部放到第一層陣列
+            foreach ($data as $child_ary) foreach ($child_ary as $val)
+            {
+                array_push($ary, $val);
+            }   
+        }
 
-		return $this;
+		self::$data[$language] = $ary;
+
 	}
+
+    // 設定假文資料
+    public static function lang($language)
+    {
+        //設定語言資料並記錄起來
+        self::set_data($language);
+
+        self::$language = $language;
+
+        return new Jsnfakestr;
+    }
+
 
 	/**
 	 * 產生假文
@@ -173,24 +220,29 @@ class Jsnfakestr
     public function create($num = 20, $num_rand_limit = 0, $over_string = "")
     {
     	//字串編碼
-    	$strcode = "utf-8";
+        $strcode = "utf-8";
+        
+        $string  = NULL;
 
-    	
-		$string = NULL;
-		
-		//若未手動設置假文就使用內置假文
-		if (empty($this->data)) $this->set_data();
-		$ary = $this->data;
+        // 如果沒指定語言
+        if (empty(self::$data[self::$language])) 
+        {
+            self::set_data();
+            // array_merge(arr1, arr2)
+        }
+        
+        $ary     = self::$data[self::$language];
 
 		while(true)
 		{
 			//打散陣列			
-			$ary_rand = $this->array_random($ary, count($ary));
-			$string   .= implode("", $ary_rand);
-			
-			//假文總字數
-			$num_fake = mb_strlen($string, $strcode);
-			
+            $ary_rand = self::array_random($ary, count($ary));
+            
+            $string   .= implode("", $ary_rand);
+            
+            //假文總字數
+            $num_fake = mb_strlen($string, $strcode);
+
 			//若字數不足
 			if ($num_rand_limit > 0)
 			{
@@ -204,10 +256,13 @@ class Jsnfakestr
 			//使用區間數量
 			if ($num_rand_limit > 0)
 			{
-				$num =  rand($num, $num_rand_limit);
+				$num  =  rand($num, $num_rand_limit);
 			}
 			
-			$string   = $this->word_limit($string, $num, $over_string, true, $strcode);
+            //如果是英文就 / 2
+            if (self::$language == "en") $num = $num / 2;
+
+			$string   = self::word_limit($string, $num, $over_string, true, $strcode);
 
 			break;
 		}
